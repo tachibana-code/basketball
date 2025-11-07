@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>岡山情報ビジネス学院 - バスケサークル</title>
   <style>
-    /* 共通スタイル */
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.6;
@@ -54,6 +53,47 @@
     a:hover {
       text-decoration: underline;
     }
+
+    /* スライダーのスタイル */
+    .slider-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 1s ease;
+    }
+
+    .slider img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    /* 自動で切り替え */
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      33% {
+        transform: translateX(-100%);
+      }
+      66% {
+        transform: translateX(-200%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* スライダー全体にアニメーションを適用 */
+    .slider-container {
+      animation: slide 9s infinite;
+    }
   </style>
 </head>
 
@@ -63,6 +103,18 @@
     <h1>岡山情報ビジネス学院 バスケサークル</h1>
     <p>バスケサークルの活動やメンバーを紹介します！あなたも一緒にバスケを楽しもう！</p>
   </header>
+
+  <!-- 画像スライダー -->
+  <section>
+    <h2>サークルの活動風景</h2>
+    <div class="slider-container">
+      <div class="slider">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.football-zone.net%2Farchives%2F183531&psig=AOvVaw3uCQPH3BQ94VrI6GQNohX7&ust=1762626480885000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMDvgr3V4JADFQAAAAAdAAAAABAK" alt="画像1">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Feiga.com%2Fnews%2F20180518%2F5%2F&psig=AOvVaw2HZvojO5hVObovNkxGGyhB&ust=1762627868674000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCID-mtXa4JADFQAAAAAdAAAAABAT" alt="画像2">
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cnn.co.jp%2Fshowbiz%2F35194014.html&psig=AOvVaw3FMaqemTCro9fSgn0uDePY&ust=1762627915208000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCICnsIHb4JADFQAAAAAdAAAAABAE" alt="画像3">
+      </div>
+    </div>
+  </section>
 
   <section>
     <h2>サークル紹介</h2>
