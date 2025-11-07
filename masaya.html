@@ -19,12 +19,13 @@
     header {
       background: #FF6F00;
       color: white;
-      padding: 100px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
     header h1 {
       font-size: 3em;
+      margin: 0;
     }
 
     section {
@@ -36,6 +37,27 @@
     h2 {
       font-size: 2em;
       color: #FF6F00;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #FF6F00;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #e65c00;
     }
 
     footer {
@@ -43,16 +65,38 @@
       padding: 20px;
       background-color: #333;
       color: white;
+      font-size: 1em;
     }
 
     a {
       color: #FF6F00;
       text-decoration: none;
-      font-weight: bold;
     }
 
     a:hover {
       text-decoration: underline;
+    }
+
+    /* 音楽セクション */
+    .music-section {
+      padding: 40px 20px;
+      background-color: white;
+    }
+
+    .music-video img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .music-video {
+      margin-bottom: 30px;
+    }
+
+    .music-video ul {
+      font-size: 1em;
+      list-style-type: none;
+      padding: 0;
     }
   </style>
 </head>
@@ -74,49 +118,42 @@
     <p><a href="suzuki.html" class="btn">🏀 活動内容を確認する</a></p>
   </section>
 
+  <section class="music-section">
+    <h2>MUSIC</h2>
 
-
-</body>
-
-  <body>
-
-    <h1>MUSIC</h1>
-
-    <h2>Attention</h2>
-    <div>
-        <!-- 画像をクリックするとYouTubeの動画ページに飛ぶ -->
-        <a href="https://youtu.be/js1CtxSY38I" target="_blank">
-            <img src="https://img.youtube.com/vi/js1CtxSY38I/maxresdefault.jpg" alt="Attention Thumbnail" width="560" height="315">
-        </a>
-    </div>
-    <ul>
-        <li>マイナーとメジャーを行き来するキーチェンジだけでなくときめく心を堂々と表現した曲。</li>
-    </ul>
-    
-    <h2>Hype Boy</h2>
-    <div>
-        <!-- 画像をクリックするとYouTubeの動画ページに飛ぶ -->
-        <a href="https://youtu.be/11cta61wi0g" target="_blank">
-            <img src="https://img.youtube.com/vi/11cta61wi0g/maxresdefault.jpg" alt="Hype Boy Thumbnail" width="560" height="315">
-        </a>
-    </div>
-    <ul>
-        <li>ムーンバートンとエレクトロポップを結合したサウンドと独特なフリーコーラスが魅力的で、各パートごとにメンバーたちの個性ある歌唱が引き立つ曲。</li>
-    </ul>
-
-    <h2>How Sweet</h2>
-    <div>
-      <!-- 画像をクリックするとYouTubeの動画ページに飛ぶ -->
-      <a href="https://youtu.be/Q3K0TOvTOno" target="_blank">
-          <img src="https://img.youtube.com/vi/Q3K0TOvTOno/maxresdefault.jpg" alt="How Sweet Thumbnail" width="560" height="315">
+    <div class="music-video">
+      <h3>Attention</h3>
+      <a href="https://youtu.be/js1CtxSY38I" target="_blank">
+        <img src="https://img.youtube.com/vi/js1CtxSY38I/maxresdefault.jpg" alt="Attention Thumbnail">
       </a>
-  </div>
-    <ul>
+      <ul>
+        <li>マイナーとメジャーを行き来するキーチェンジだけでなくときめく心を堂々と表現した曲。</li>
+      </ul>
+    </div>
+
+    <div class="music-video">
+      <h3>Hype Boy</h3>
+      <a href="https://youtu.be/11cta61wi0g" target="_blank">
+        <img src="https://img.youtube.com/vi/11cta61wi0g/maxresdefault.jpg" alt="Hype Boy Thumbnail">
+      </a>
+      <ul>
+        <li>ムーンバートンとエレクトロポップを結合したサウンドと独特なフリーコーラスが魅力的で、各パートごとにメンバーたちの個性ある歌唱が引き立つ曲。</li>
+      </ul>
+    </div>
+
+    <div class="music-video">
+      <h3>How Sweet</h3>
+      <a href="https://youtu.be/Q3K0TOvTOno" target="_blank">
+        <img src="https://img.youtube.com/vi/Q3K0TOvTOno/maxresdefault.jpg" alt="How Sweet Thumbnail">
+      </a>
+      <ul>
         <li>ポジティブで明るい雰囲気に包まれており、愛と成長のテーマに焦点を当てています。</li>
-    </ul>
+      </ul>
+    </div>
 
+  </section>
 
-      <footer>
+  <footer>
     <p>© 2025 岡山情報ビジネス学院 バスケサークル</p>
   </footer>
 
