@@ -54,18 +54,45 @@
       text-decoration: underline;
     }
 
-    /* 画像のスタイル */
-    .image-container {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .image-container img {
+    /* 画像スライダーのスタイル */
+    .slider-container {
       width: 100%;
       max-width: 100%;
-      height: auto;
+      margin-top: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slider img {
+      width: 100%;
+      max-height: 500px;
       object-fit: cover;
-      border-radius: 8px;  /* 画像の角を少し丸く */
+    }
+
+    /* 自動で切り替えアニメーション */
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      33% {
+        transform: translateX(-100%);
+      }
+      66% {
+        transform: translateX(-200%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* スライダー全体にアニメーションを適用 */
+    .slider-container {
+      animation: slide 9s infinite;
     }
   </style>
 </head>
@@ -77,11 +104,15 @@
     <p>バスケサークルの活動やメンバーを紹介します！あなたも一緒にバスケを楽しもう！</p>
   </header>
 
-  <!-- 単一画像の表示 -->
+  <!-- 画像スライダー -->
   <section>
     <h2>サークルの活動風景</h2>
-    <div class="image-container">
-      <img src="https://kids.yahoo.co.jp/search/_next/image?url=https%3A%2F%2Fmsp.c.yimg.jp%2Fimages%2Fv2%2FtpvPBYOX1wpNVI1UoNSgEvSw6AWBvo8R94d_tq0_CkurNWjOiNVMFCoFP8sUpfaPZFLftS35-zU0pCvsgNTxLGYzUGDUbGwEmEAj7zi2Mu7szzCbZENTza-YgU3U-_hFhWxamlc3fUVQpg9OVjrz7RQx0V7tfujTsouQqq-Jg-IaTtnWiVFvMmePQRje8cZjuKgbji386cUi1dwy56qcOcOBys-Oq6EdKFWo8PaiQy9oJHQR_sQW4M_FU_CycLM_V0Yo_SK3stlVK5GSu3IJWA%3D%3D%2Fff329c61.jpg&w=3840&q=75" alt="バスケサークルの活動">
+    <div class="slider-container">
+      <div class="slider">
+        <img src="https://web.ultra-soccer.jp/image/pcimage?image_id=126724" alt="画像1">
+        <img src="https://f.image.geki.jp/data/image/news/800/194000/193061/news_193061_1.jpg?time=20160701221434" alt="画像2">
+        <img src="https://www.football-zone.net/wp-content/uploads/2023/10/21191106/20231021_Neymar-barcelona-Getty.jpg" alt="画像3">
+      </div>
     </div>
   </section>
 
