@@ -78,10 +78,80 @@
     <p><a href="masaya.html" class="btn">📝 クラスルームの入り方を確認する</a></p>
   </section>
 
-  <footer>
+
+
+</body>
+
+
+  <body>
+
+<header>
+    <h1>キングダム Raw Free</h1>
+</header>
+
+<div class="container">
+    <!-- 漫画タイトル -->
+    <div class="title">キングダム Raw Free</div>
+
+    <!-- 画像を表示する場所 -->
+    <img src="image/KING.png" alt="Comic 1">
+
+    <!-- その他の情報 -->
+    <div class="subtitle">Other name: One Piece</div>
+    <div class="subtitle">Author: Updating</div>
+    <div class="subtitle">Artist: Updating</div>
+    <div class="subtitle">Status: On Going</div>
+    <div class="subtitle">Categories: 青年 アクション コメディ 少年 SF.ファンタジー コミックス バトル 超能力 人情 アニメ化 メディア化 映画化 長編</div>
+    <div class="subtitle">Views: 1,286,892</div>
+
+    <!-- ブックマークボタン -->
+    <div class="subtitle">
+        <button>Bookmark</button>
+    </div>
+
+    <!-- 作品内容 -->
+    <div class="details">
+        <h3>作品内容</h3>
+        <p>時は紀元前――。いまだ一度も統一されたことのない中国大陸は、500年の大戦争時代。苛烈な戦乱の世に生きる少年・信は、自らの腕で天下に名を成すことを目指す!!2013年、第17回手塚治虫文化賞マンガ大賞受賞！</p>
+    </div>
+
+    <!-- チャプターリスト -->
+    <div class="chapters">
+        <h3>CHAPTERS</h3>
+        <ul class="chapter-list">
+            <li onclick="showImage('chapter1139.jpg')">【第 1139 話】New</li>
+            <li onclick="showImage('chapter1138.jpg')">【第 1138 話】2025年01月30日</li>
+            <li onclick="showImage('chapter1137.jpg')">【第 1137 話】2025年01月23日</li>
+            <li onclick="showImage('chapter1136.jpg')">【第 1136 話】2025年01月17日</li>
+            <li onclick="showImage('chapter1135.jpg')">【第 1135 話】2025年01月04日</li>
+            <li onclick="showImage('chapter1134.jpg')">【第 1134 話】2024年12月19日</li>
+            <li onclick="showImage('chapter1133.jpg')">【第 1133 話】2024年12月05日</li>
+            <li onclick="showImage('chapter1132.jpg')">【第 1132 話】2024年11月28日</li>
+            <li onclick="showImage('chapter1131.jpg')">【第 1131 話】2024年11月08日</li>
+            <li onclick="showImage('chapter1130.jpg')">【第 1130 話】2024年10月17日</li>
+            <li onclick="showImage('chapter1129.jpg')">【第 1129 話】2024年10月10日</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 無料漫画オンライン - <a href="http://yourdomain.com" target="_blank">yourdomain.com</a></p>
+</footer>
+
+<script>
+    function showImage(imageName) {
+        const imageContainer = document.getElementById('imageContainer');
+        const chapterImage = document.getElementById('chapterImage');
+        chapterImage.src = 'path/to/images/' + imageName;  // 画像パスを指定
+        imageContainer.style.display = 'block';  // 画像表示
+    }
+</script>
+
+      <footer>
     <p>© 2025 岡山情報ビジネス学院 バスケサークル</p>
   </footer>
 
 </body>
+
 
 </html>
