@@ -18,7 +18,7 @@
     header {
       background: #FF6F00;
       color: white;
-      padding: 80px 20px;  /* ヘッダーのパディングを少し減らして調整 */
+      padding: 80px 20px;
       text-align: center;
     }
 
@@ -54,45 +54,18 @@
       text-decoration: underline;
     }
 
-    /* スライダーのスタイル */
-    .slider-container {
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-      overflow: hidden;
-      position: relative;
+    /* 画像のスタイル */
+    .image-container {
+      text-align: center;
+      margin-top: 20px;
     }
 
-    .slider {
-      display: flex;
-      transition: transform 1s ease;
-    }
-
-    .slider img {
+    .image-container img {
       width: 100%;
-      max-height: 500px;
+      max-width: 100%;
+      height: auto;
       object-fit: cover;
-    }
-
-    /* 自動で切り替え */
-    @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      33% {
-        transform: translateX(-100%);
-      }
-      66% {
-        transform: translateX(-200%);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    /* スライダー全体にアニメーションを適用 */
-    .slider-container {
-      animation: slide 9s infinite;
+      border-radius: 8px;  /* 画像の角を少し丸く */
     }
   </style>
 </head>
@@ -104,15 +77,11 @@
     <p>バスケサークルの活動やメンバーを紹介します！あなたも一緒にバスケを楽しもう！</p>
   </header>
 
-  <!-- 画像スライダー -->
+  <!-- 単一画像の表示 -->
   <section>
     <h2>サークルの活動風景</h2>
-    <div class="slider-container">
-      <div class="slider">
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.football-zone.net%2Farchives%2F183531&psig=AOvVaw3uCQPH3BQ94VrI6GQNohX7&ust=1762626480885000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMDvgr3V4JADFQAAAAAdAAAAABAK" alt="画像1">
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Feiga.com%2Fnews%2F20180518%2F5%2F&psig=AOvVaw2HZvojO5hVObovNkxGGyhB&ust=1762627868674000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCID-mtXa4JADFQAAAAAdAAAAABAT" alt="画像2">
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.cnn.co.jp%2Fshowbiz%2F35194014.html&psig=AOvVaw3FMaqemTCro9fSgn0uDePY&ust=1762627915208000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCICnsIHb4JADFQAAAAAdAAAAABAE" alt="画像3">
-      </div>
+    <div class="image-container">
+      <img src="https://kids.yahoo.co.jp/search/_next/image?url=https%3A%2F%2Fmsp.c.yimg.jp%2Fimages%2Fv2%2FtpvPBYOX1wpNVI1UoNSgEvSw6AWBvo8R94d_tq0_CkurNWjOiNVMFCoFP8sUpfaPZFLftS35-zU0pCvsgNTxLGYzUGDUbGwEmEAj7zi2Mu7szzCbZENTza-YgU3U-_hFhWxamlc3fUVQpg9OVjrz7RQx0V7tfujTsouQqq-Jg-IaTtnWiVFvMmePQRje8cZjuKgbji386cUi1dwy56qcOcOBys-Oq6EdKFWo8PaiQy9oJHQR_sQW4M_FU_CycLM_V0Yo_SK3stlVK5GSu3IJWA%3D%3D%2Fff329c61.jpg&w=3840&q=75" alt="バスケサークルの活動">
     </div>
   </section>
 
