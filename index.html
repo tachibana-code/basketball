@@ -63,36 +63,43 @@
       position: relative;
     }
 
-    .slider {
+    .slides {
       display: flex;
       transition: transform 1s ease-in-out;
     }
 
-    .slider img {
+    .slide {
       width: 100%;
       max-height: 500px;
       object-fit: cover;
     }
 
-    /* 自動で切り替えアニメーション */
-    @keyframes slide {
-      0% {
-        transform: translateX(0);
-      }
-      33% {
-        transform: translateX(-100%);
-      }
-      66% {
-        transform: translateX(-200%);
-      }
-      100% {
-        transform: translateX(0);
-      }
+    /* スライダーの矢印 */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      transform: translateY(-50%);
     }
 
-    /* スライダー全体にアニメーションを適用 */
-    .slider-container {
-      animation: slide 9s infinite;
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    /* ボタンのホバー効果 */
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
     }
   </style>
 </head>
@@ -108,11 +115,13 @@
   <section>
     <h2>サークルの活動風景</h2>
     <div class="slider-container">
-      <div class="slider">
-        <img src="https://web.ultra-soccer.jp/image/pcimage?image_id=126724" alt="画像1">
-        <img src="https://f.image.geki.jp/data/image/news/800/194000/193061/news_193061_1.jpg?time=20160701221434" alt="画像2">
-        <img src="https://www.football-zone.net/wp-content/uploads/2023/10/21191106/20231021_Neymar-barcelona-Getty.jpg" alt="画像3">
+      <div class="slides">
+        <img class="slide" src="https://web.ultra-soccer.jp/image/pcimage?image_id=126724" alt="画像1">
+        <img class="slide" src="https://f.image.geki.jp/data/image/news/800/194000/193061/news_193061_1.jpg?time=20160701221434" alt="画像2">
+        <img class="slide" src="https://www.football-zone.net/wp-content/uploads/2023/10/21191106/20231021_Neymar-barcelona-Getty.jpg" alt="画像3">
       </div>
+      <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+      <button class="next" onclick="plusSlides(1)">&#10095;</button>
     </div>
   </section>
 
@@ -129,6 +138,34 @@
   <footer>
     <p>© 2025 岡山情報ビジネス学院 バスケサークル</p>
   </footer>
+
+  <script>
+    let slideIndex = 0;
+
+    // 画像を次に進める関数
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // スライドを表示する関数
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("slide");
+      
+      if (n >= slides.length) { slideIndex = 0; }    // 画像の数を越えたら最初に戻る
+      if (n < 0) { slideIndex = slides.length - 1; }  // 最初の画像に戻る
+
+      // すべてのスライドを非表示
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      // 現在のスライドを表示
+      slides[slideIndex].style.display = "block";
+    }
+
+    // 初回スライドを表示
+    showSlides(slideIndex);
+  </script>
 
 </body>
 
