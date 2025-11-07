@@ -165,6 +165,11 @@
       slides[slideIndex].style.display = "block";
     }
 
+    // 自動でスライドを進める
+    setInterval(function() {
+      plusSlides(1); // 1枚進める
+    }, 3000); // 3秒ごとにスライドを切り替える
+
     // 初回スライドを表示
     showSlides(slideIndex);
   </script>
