@@ -165,10 +165,10 @@
       slides[slideIndex].style.display = "block";
     }
 
-    // 自動でスライドを進める
+    // 自動でスライドを進める（1秒ごと）
     setInterval(function() {
       plusSlides(1); // 1枚進める
-    }, 3000); // 3秒ごとにスライドを切り替える
+    }, 1000); // 1秒ごとにスライドを切り替える
 
     // 初回スライドを表示
     showSlides(slideIndex);
