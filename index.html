@@ -150,6 +150,7 @@
       justify-content: center;
       gap: 15px;
       margin-top: 20px;
+      flex-wrap: wrap; /* スマホ用に横並びを縦に変更 */
     }
 
     .member-box {
@@ -158,6 +159,7 @@
       border-radius: 8px;
       width: 30%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
     }
 
     .member-box h3 {
@@ -179,6 +181,67 @@
       color: white;
       font-size: 1em;
     }
+
+    /* レスポンシブデザイン */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em; /* ヘッダーのタイトルを小さく */
+      }
+
+      header h2 {
+        font-size: 1em; /* サブタイトルを小さく */
+      }
+
+      .header-buttons a {
+        padding: 6px 12px; /* ボタンを少し小さく */
+      }
+
+      section h2 {
+        font-size: 1.5em; /* 見出しを少し小さく */
+      }
+
+      .member-box {
+        width: 45%; /* メンバーの声ボックスを2列表示に */
+      }
+
+      .small-section {
+        font-size: 0.7em; /* 小さいセクションのフォントをさらに小さく */
+      }
+
+      footer {
+        font-size: 0.9em; /* フッターのフォントを少し小さく */
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8em; /* モバイル向けにさらに小さく */
+      }
+
+      header h2 {
+        font-size: 0.9em;
+      }
+
+      .header-buttons a {
+        padding: 5px 10px;
+      }
+
+      section {
+        padding: 20px 10px; /* セクション内のパディングを調整 */
+      }
+
+      section h2 {
+        font-size: 1.2em; /* 見出しをさらに小さく */
+      }
+
+      .member-box {
+        width: 100%; /* メンバーの声ボックスを1列表示に */
+      }
+
+      footer {
+        font-size: 0.8em; /* フッターを小さく */
+      }
+    }
   </style>
 </head>
 
@@ -195,7 +258,7 @@
 
   <!-- 画像スライダー -->
   <section>
-
+    <h2>サークルの活動風景</h2>
     <div class="slider-container">
       <div class="slides">
         <img class="slide" src="https://web.ultra-soccer.jp/image/pcimage?image_id=126724" alt="画像1">
@@ -207,11 +270,11 @@
     </div>
   </section>
 
-  <!-- お知らせセクション -->
+  <!-- お知らせ -->
   <section>
     <h2>お知らせ</h2>
-    <p><strong>11月30日</strong> 410教室で12時より説明会</p>
-    <p><strong>12月01日</strong> 灘崎体育センターにて</p>
+    <p>・１１月３０日　　４１０教室で１２時より</p>
+    <p>・１２月０１日　　　　灘崎体育センター</p>
   </section>
 
   <!-- メンバーの声 -->
@@ -219,30 +282,24 @@
     <h2>メンバーの声</h2>
     <div class="member-voices">
       <div class="member-box">
-        <h3>情報スペシャリスト学科 丸山</h3>
-        <p>「バスケはチームワークが大事！仲間と一緒に成長していけるのが楽しいです！」</p>
+        <h3>情報スペシャリスト学科　　丸山</h3>
+        <p>バスケが楽しいし、みんなで一緒に活動できて最高です！</p>
       </div>
       <div class="member-box">
-        <h3>ゲームクリエーター学科 李</h3>
-        <p>「最初は運動が苦手だったけど、サークルの仲間が支えてくれて楽しくプレイしています！」</p>
+        <h3>ゲームクリエーター学科　　李</h3>
+        <p>バスケを通じて新しい友達ができました！</p>
       </div>
       <div class="member-box">
-        <h3>国際IT学科 徐</h3>
-        <p>「バスケを通じていろんな人と友達になれて、すごく充実しています！」</p>
+        <h3>国際IT学科　　　　　徐</h3>
+        <p>初めてのバスケでしたが、サークルのみんなが親切に教えてくれました！</p>
       </div>
     </div>
   </section>
 
-  <!-- 資料請求セクション（小さく） -->
+  <!-- 小さなセクション -->
   <section class="small-section">
-    <h2>資料請求</h2>
-    <p>説明会に参加された方には、サークルの詳細な情報をお渡しします。説明会に来ていただき、サークルの活動内容や雰囲気を感じてください。</p>
-  </section>
-
-  <!-- 保護者の方へ（小さく） -->
-  <section class="small-section">
-    <h2>保護者の方へ</h2>
-    <p>安心していただけるよう、私たちのサークルは安全面にも十分配慮しています。活動内容や安全対策について詳しくご説明しますので、どうぞご安心ください。</p>
+    <h2>資料請求 / 保護者の方へ</h2>
+    <p>バスケサークルに関する詳細情報を資料としてお送りいたします。保護者の方も安心してご参加いただけます。</p>
   </section>
 
   <footer>
@@ -278,4 +335,3 @@
 </body>
 
 </html>
-
