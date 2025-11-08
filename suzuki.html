@@ -4,55 +4,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>鈴木 雅也 - バスケサークル活動内容</title>
+  <title>バスケサークル活動内容</title>
   <style>
     /* 共通スタイル */
     body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #4a4a4a;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background: #FF6F00;
+      background: #0A3D62; /* 深い青 */
       color: white;
-      padding: 100px 20px;
+      padding: 60px 15px;
       text-align: center;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em;
+      margin: 0;
     }
 
+    header h2 {
+      font-size: 1.2em;
+      margin: 5px 0;
+      font-weight: normal;
+    }
+
+    /* ボタン配置 */
+    .header-buttons {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .header-buttons a {
+      background-color: #e74c3c;
+      color: white;
+      padding: 8px 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .header-buttons a:hover {
+      background-color: #f39c12;
+      transform: scale(1.05);
+    }
+
+    /* セクション */
     section {
-      padding: 50px 20px;
-      text-align: center;
+      padding: 30px 15px;
       background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      margin: 20px 0;
+      border-radius: 10px;
+      text-align: center;
     }
 
-    h2 {
+    section h2 {
       font-size: 2em;
-      color: #FF6F00;
+      color: #0A3D62;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 1em;
+      margin: 12px 0;
+      line-height: 1.5;
+    }
+
+    a {
+      color: #0A3D62;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #e74c3c;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #333;
+      padding: 15px;
+      background-color: #0A3D62;
       color: white;
+      font-size: 1em;
     }
 
-    a {
-      color: #FF6F00;
-      text-decoration: none;
-      font-weight: bold;
+    /* レスポンシブデザイン */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      header h2 {
+        font-size: 1em;
+      }
+
+      .header-buttons a {
+        padding: 6px 12px;
+      }
+
+      section h2 {
+        font-size: 1.5em;
+      }
+
+      footer {
+        font-size: 0.9em;
+      }
     }
 
-    a:hover {
-      text-decoration: underline;
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      header h2 {
+        font-size: 0.9em;
+      }
+
+      .header-buttons a {
+        padding: 5px 10px;
+      }
+
+      section {
+        padding: 20px 10px;
+      }
+
+      section h2 {
+        font-size: 1.2em;
+      }
+
+      footer {
+        font-size: 0.8em;
+      }
     }
   </style>
 </head>
@@ -60,8 +154,12 @@
 <body>
 
   <header>
-    <h1>鈴木 雅也 - バスケサークル活動内容</h1>
-    <p>バスケサークルの練習内容や大会情報についてご紹介します。</p>
+    <h2>岡山情報ビジネス学院</h2>
+    <h1>バスケサークル活動内容</h1>
+    <div class="header-buttons">
+      <a href="index.html">トップページ</a>
+      <a href="masaya.html">クラスルーム</a>
+    </div>
   </header>
 
   <section>
@@ -74,84 +172,14 @@
     </ul>
     <p>練習を重ね、チームで試合を通じて成長しています！</p>
 
-    <p><a href="index.html" class="btn">🏠 バスケサークルトップへ戻る</a></p>
-    <p><a href="masaya.html" class="btn">📝 クラスルームの入り方を確認する</a></p>
+    <p><a href="index.html">🏠 バスケサークルトップへ戻る</a></p>
+    <p><a href="masaya.html">📝 クラスルームの入り方を確認する</a></p>
   </section>
 
-
-
-</body>
-
-
-  <body>
-
-<header>
-    <h1>キングダム Raw Free</h1>
-</header>
-
-<div class="container">
-    <!-- 漫画タイトル -->
-    <div class="title">キングダム Raw Free</div>
-
-    <!-- 画像を表示する場所 -->
-    <img src="image/KING.png" alt="Comic 1">
-
-    <!-- その他の情報 -->
-    <div class="subtitle">Other name: One Piece</div>
-    <div class="subtitle">Author: Updating</div>
-    <div class="subtitle">Artist: Updating</div>
-    <div class="subtitle">Status: On Going</div>
-    <div class="subtitle">Categories: 青年 アクション コメディ 少年 SF.ファンタジー コミックス バトル 超能力 人情 アニメ化 メディア化 映画化 長編</div>
-    <div class="subtitle">Views: 1,286,892</div>
-
-    <!-- ブックマークボタン -->
-    <div class="subtitle">
-        <button>Bookmark</button>
-    </div>
-
-    <!-- 作品内容 -->
-    <div class="details">
-        <h3>作品内容</h3>
-        <p>時は紀元前――。いまだ一度も統一されたことのない中国大陸は、500年の大戦争時代。苛烈な戦乱の世に生きる少年・信は、自らの腕で天下に名を成すことを目指す!!2013年、第17回手塚治虫文化賞マンガ大賞受賞！</p>
-    </div>
-
-    <!-- チャプターリスト -->
-    <div class="chapters">
-        <h3>CHAPTERS</h3>
-        <ul class="chapter-list">
-            <li onclick="showImage('chapter1139.jpg')">【第 1139 話】New</li>
-            <li onclick="showImage('chapter1138.jpg')">【第 1138 話】2025年01月30日</li>
-            <li onclick="showImage('chapter1137.jpg')">【第 1137 話】2025年01月23日</li>
-            <li onclick="showImage('chapter1136.jpg')">【第 1136 話】2025年01月17日</li>
-            <li onclick="showImage('chapter1135.jpg')">【第 1135 話】2025年01月04日</li>
-            <li onclick="showImage('chapter1134.jpg')">【第 1134 話】2024年12月19日</li>
-            <li onclick="showImage('chapter1133.jpg')">【第 1133 話】2024年12月05日</li>
-            <li onclick="showImage('chapter1132.jpg')">【第 1132 話】2024年11月28日</li>
-            <li onclick="showImage('chapter1131.jpg')">【第 1131 話】2024年11月08日</li>
-            <li onclick="showImage('chapter1130.jpg')">【第 1130 話】2024年10月17日</li>
-            <li onclick="showImage('chapter1129.jpg')">【第 1129 話】2024年10月10日</li>
-        </ul>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2025 無料漫画オンライン - <a href="http://yourdomain.com" target="_blank">yourdomain.com</a></p>
-</footer>
-
-<script>
-    function showImage(imageName) {
-        const imageContainer = document.getElementById('imageContainer');
-        const chapterImage = document.getElementById('chapterImage');
-        chapterImage.src = 'path/to/images/' + imageName;  // 画像パスを指定
-        imageContainer.style.display = 'block';  // 画像表示
-    }
-</script>
-
-      <footer>
+  <footer>
     <p>© 2025 岡山情報ビジネス学院 バスケサークル</p>
   </footer>
 
 </body>
-
 
 </html>
