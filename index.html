@@ -6,61 +6,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>岡山情報ビジネス学院 - バスケサークル</title>
   <style>
+    /* 基本のスタイル */
     body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #4a4a4a;
       margin: 0;
       padding: 0;
     }
 
+    /* ヘッダーのデザイン */
     header {
-      background: #FF6F00;
+      background: #0A3D62; /* 深い青 */
       color: white;
-      padding: 80px 20px;
+      padding: 60px 15px; /* ヘッダーの高さを縮小 */
       text-align: center;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em; /* バスケサークルを少し小さめに */
+      margin: 0;
     }
 
-    section {
-      padding: 50px 20px;
-      text-align: center;
-      background-color: white;
+    header h2 {
+      font-size: 1.2em; /* 小さく岡山情報ビジネス学院 */
+      margin: 5px 0;
+      font-weight: normal;
     }
 
-    h2 {
-      font-size: 2em;
-      color: #FF6F00;
+    .header-buttons {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      display: flex;
+      gap: 10px; /* ボタンの間隔を縮小 */
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
+    .header-buttons a {
+      background-color: #e74c3c; /* 赤のアクセント */
       color: white;
+      padding: 8px 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .header-buttons a:hover {
+      background-color: #f39c12;
+      transform: scale(1.05);
+    }
+
+    /* セクションのデザイン */
+    section {
+      padding: 30px 15px; /* セクションのパディングを縮小 */
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      margin: 20px 0;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2em;
+      color: #0A3D62;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 1em;
+      margin: 12px 0;
+      line-height: 1.5;
     }
 
     a {
-      color: #FF6F00;
+      color: #0A3D62;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #e74c3c;
     }
 
-    /* 画像スライダーのスタイル */
+    /* 画像スライダー */
     .slider-container {
       width: 100%;
       max-width: 100%;
-      margin-top: 20px;
+      margin-top: 30px;
       overflow: hidden;
       position: relative;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .slides {
@@ -70,38 +110,74 @@
 
     .slide {
       width: 100%;
-      max-height: 500px;
+      max-height: 400px; /* 高さを縮小 */
       object-fit: cover;
+      border-radius: 8px;
     }
 
-    /* スライダーの矢印 */
     .prev,
     .next {
       position: absolute;
       top: 50%;
-      padding: 16px;
+      padding: 15px;
       color: white;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 24px;
       background-color: rgba(0, 0, 0, 0.5);
       border: none;
       cursor: pointer;
       border-radius: 50%;
       transform: translateY(-50%);
+      transition: background-color 0.3s ease;
     }
 
-    .prev {
-      left: 0;
-    }
-
-    .next {
-      right: 0;
-    }
-
-    /* ボタンのホバー効果 */
     .prev:hover,
     .next:hover {
       background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+      left: 5px;
+    }
+
+    .next {
+      right: 5px;
+    }
+
+    /* メンバーの声ボックス */
+    .member-voices {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .member-box {
+      background-color: #ecf0f1;
+      padding: 15px;
+      border-radius: 8px;
+      width: 30%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .member-box h3 {
+      margin-bottom: 8px;
+      color: #0A3D62;
+    }
+
+    /* 小さくするセクション */
+    .small-section {
+      font-size: 0.8em; /* フォントサイズをさらに縮小 */
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #0A3D62;
+      color: white;
+      font-size: 1em;
     }
   </style>
 </head>
@@ -109,8 +185,12 @@
 <body>
 
   <header>
-    <h1>岡山情報ビジネス学院 バスケサークル</h1>
-    <p>バスケサークルの活動やメンバーを紹介します！あなたも一緒にバスケを楽しもう！</p>
+    <h2>岡山情報ビジネス学院</h2>
+    <h1>バスケサークル</h1>
+    <div class="header-buttons">
+      <a href="suzuki.html">活動内容</a>
+      <a href="masaya.html">クラスルーム</a>
+    </div>
   </header>
 
   <!-- 画像スライダー -->
@@ -127,14 +207,42 @@
     </div>
   </section>
 
+  <!-- お知らせセクション -->
   <section>
-    <h2>サークル紹介</h2>
-    <p>岡山情報ビジネス学院のバスケサークルは、仲間と共にバスケを楽しむことを目的としたサークルです！初心者から経験者まで、誰でも大歓迎です！</p>
-    <p><strong>活動日：</strong>月・水・土</p>
-    <p><strong>活動場所：</strong>灘崎体育センター・Zipアリーナ</p>
+    <h2>お知らせ</h2>
+    <p><strong>11月30日</strong> 410教室で12時より説明会</p>
+    <p><strong>12月01日</strong> 灘崎体育センターにて</p>
+  </section>
 
-    <p><a href="masaya.html" class="btn">📝 クラスルームの入り方</a></p>
-    <p><a href="suzuki.html" class="btn">🏀 バスケサークルの活動内容</a></p>
+  <!-- メンバーの声 -->
+  <section>
+    <h2>メンバーの声</h2>
+    <div class="member-voices">
+      <div class="member-box">
+        <h3>情報スペシャリスト学科 丸山</h3>
+        <p>「バスケはチームワークが大事！仲間と一緒に成長していけるのが楽しいです！」</p>
+      </div>
+      <div class="member-box">
+        <h3>ゲームクリエーター学科 李</h3>
+        <p>「最初は運動が苦手だったけど、サークルの仲間が支えてくれて楽しくプレイしています！」</p>
+      </div>
+      <div class="member-box">
+        <h3>国際IT学科 徐</h3>
+        <p>「バスケを通じていろんな人と友達になれて、すごく充実しています！」</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 資料請求セクション（小さく） -->
+  <section class="small-section">
+    <h2>資料請求</h2>
+    <p>説明会に参加された方には、サークルの詳細な情報をお渡しします。説明会に来ていただき、サークルの活動内容や雰囲気を感じてください。</p>
+  </section>
+
+  <!-- 保護者の方へ（小さく） -->
+  <section class="small-section">
+    <h2>保護者の方へ</h2>
+    <p>安心していただけるよう、私たちのサークルは安全面にも十分配慮しています。活動内容や安全対策について詳しくご説明しますので、どうぞご安心ください。</p>
   </section>
 
   <footer>
@@ -144,33 +252,26 @@
   <script>
     let slideIndex = 0;
 
-    // 画像を次に進める関数
     function plusSlides(n) {
       showSlides(slideIndex += n);
     }
 
-    // スライドを表示する関数
     function showSlides(n) {
       let slides = document.getElementsByClassName("slide");
-      
-      if (n >= slides.length) { slideIndex = 0; }    // 画像の数を越えたら最初に戻る
-      if (n < 0) { slideIndex = slides.length - 1; }  // 最初の画像に戻る
+      if (n >= slides.length) { slideIndex = 0; }
+      if (n < 0) { slideIndex = slides.length - 1; }
 
-      // すべてのスライドを非表示
       for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
 
-      // 現在のスライドを表示
       slides[slideIndex].style.display = "block";
     }
 
-    // 自動でスライドを進める（1秒ごと）
     setInterval(function() {
-      plusSlides(1); // 1枚進める
-    }, 1000); // 1秒ごとにスライドを切り替える
+      plusSlides(1);
+    }, 3000);
 
-    // 初回スライドを表示
     showSlides(slideIndex);
   </script>
 
