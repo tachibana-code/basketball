@@ -20,7 +20,7 @@
 
     /* ヘッダーのデザイン */
     header {
-      background: #0A3D62; 
+      background: #0A3D62;
       color: white;
       padding: 60px 15px;
       text-align: center;
@@ -48,7 +48,7 @@
     }
 
     .header-buttons a {
-      background-color: #e74c3c; 
+      background-color: #e74c3c;
       color: white;
       padding: 8px 18px;
       text-decoration: none;
@@ -167,18 +167,6 @@
       margin-bottom: 10px;
     }
 
-    /* スクロールアニメーション */
-    .animate {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.6s ease-out;
-    }
-
-    .animate-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     /* レスポンシブデザイン */
     @media (max-width: 768px) {
       header h1 {
@@ -199,7 +187,7 @@
 
       .header-buttons {
         flex-direction: column;
-        top: 40px; /* ボタンが重ならないように調整 */
+        top: 40px;
       }
 
       .header-buttons a {
@@ -267,14 +255,14 @@
     </div>
   </header>
 
-  <section class="animate" id="classroom-section">
+  <section id="classroom-section">
     <h2>クラスルームの入り方</h2>
     <p>クラスルームのコードは以下の通りです。コードを使って、クラスに参加してください！</p>
     <p><strong>クラスルームコード：</strong>frzd2s7f</p>
     <p>参加するには、Google Classroom にログインして、このコードを使って参加します。</p>
   </section>
 
-  <section class="music-section animate" id="music-section">
+  <section class="music-section" id="music-section">
     <h2>MUSIC</h2>
 
     <div class="music-video">
@@ -312,19 +300,6 @@
   <footer>
     <p>© 2025 岡山情報ビジネス学院 バスケサークル</p>
   </footer>
-
-  <script>
-    // スクロールで要素が見える時にアニメーションを発火させる
-    window.addEventListener('scroll', function () {
-      const elements = document.querySelectorAll('.animate');
-      elements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight) {
-          el.classList.add('animate-visible');
-        }
-      });
-    });
-  </script>
 
 </body>
 
