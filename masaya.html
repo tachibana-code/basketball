@@ -4,11 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>鈴木 雅也 - クラスルームの入り方</title>
+  <title>クラスルーム</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <style>
-    /* 共通スタイル */
+    /* 全体のスタイル */
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
       background-color: #f4f4f4;
       color: #333;
@@ -17,15 +19,60 @@
     }
 
     header {
-      background: #FF6F00;
+      background: #007BFF; /* 青に変更 */
       color: white;
       padding: 80px 20px;
       text-align: center;
+      position: relative;
+      border-bottom: 5px solid #0056b3; /* 青の少し濃い色 */
     }
 
     header h1 {
       font-size: 3em;
       margin: 0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-btns {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      gap: 20px;
+      z-index: 10;
+    }
+
+    .header-btns a {
+      padding: 12px 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      font-size: 1.1em;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ホームボタン */
+    .home-btn {
+      background-color: #28A745; /* ホームは青 */
+    }
+
+    .home-btn:hover {
+      background-color: #0056b3; /* ホームボタンホバー時 */
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 活動内容ボタン */
+    .activity-btn {
+      background-color: #28A745; /* 活動内容は緑 */
+    }
+
+    .activity-btn:hover {
+      background-color: #218838; /* 活動内容ボタンホバー時 */
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
     }
 
     section {
@@ -35,29 +82,35 @@
     }
 
     h2 {
-      font-size: 2em;
-      color: #FF6F00;
+      font-size: 2.5em;
+      color: #0056b3; /* 見出しも青に変更 */
       margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     p {
       font-size: 1.1em;
       margin-bottom: 20px;
+      color: #333;
     }
 
     .btn {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 12px 30px;
       margin: 10px;
-      background-color: #FF6F00;
+      background-color: #007BFF; /* ボタンの背景を青に変更 */
       color: white;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 5px;
+      border-radius: 30px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     }
 
     .btn:hover {
-      background-color: #e65c00;
+      background-color: #0056b3;
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
     }
 
     footer {
@@ -68,12 +121,12 @@
       font-size: 1em;
     }
 
-    a {
-      color: #FF6F00;
+    footer a {
+      color: #007BFF; /* フッターリンクも青 */
       text-decoration: none;
     }
 
-    a:hover {
+    footer a:hover {
       text-decoration: underline;
     }
 
@@ -98,27 +151,39 @@
       list-style-type: none;
       padding: 0;
     }
+
+    /* スクロールアニメーション */
+    .animate {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
+
+    .animate-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
 <body>
 
   <header>
-    <h1>鈴木 雅也 - クラスルームの入り方</h1>
-    <p>バスケサークルのクラスルームに参加する方法を説明します。</p>
-  </header>
+    <div class="header-btns">
+      <a href="index.jsp" class="home-btn">🏠 ホーム</a>
+      <a href="suzuki.jsp" class="activity-btn">🏀 活動内容</a>
+    </div>
+    <h1>クラスルーム</h1>
+      </header>
 
-  <section>
+  <section class="animate" id="classroom-section">
     <h2>クラスルームの入り方</h2>
     <p>クラスルームのコードは以下の通りです。コードを使って、クラスに参加してください！</p>
-    <p><strong>クラスルームコード：</strong>frzd2s7f</p>
+    <p><strong>クラスルームコード：</strong>frzd2s7f</p> <!-- JSPで動的にコードを表示 -->
     <p>参加するには、Google Classroom にログインして、このコードを使って参加します。</p>
-
-    <p><a href="index.html" class="btn">🏠 バスケサークルトップへ戻る</a></p>
-    <p><a href="suzuki.html" class="btn">🏀 活動内容を確認する</a></p>
   </section>
 
-  <section class="music-section">
+  <section class="music-section animate" id="music-section">
     <h2>MUSIC</h2>
 
     <div class="music-video">
@@ -157,6 +222,18 @@
     <p>© 2025 岡山情報ビジネス学院 バスケサークル</p>
   </footer>
 
+  <script>
+    // スクロールで要素が見える時にアニメーションを発火させる
+    window.addEventListener('scroll', function () {
+      const elements = document.querySelectorAll('.animate');
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          el.classList.add('animate-visible');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
