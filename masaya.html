@@ -154,6 +154,52 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* スマホ向けのスタイル調整 */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em; /* スマホでの文字サイズ調整 */
+      }
+
+      header h2 {
+        font-size: 1em; /* スマホでの文字サイズ調整 */
+      }
+
+      section h2 {
+        font-size: 1.8em; /* 見出しのフォントサイズ調整 */
+      }
+
+      section p {
+        font-size: 1em; /* テキストのフォントサイズ調整 */
+      }
+
+      .header-btns {
+        flex-direction: column; /* ボタンを縦に並べる */
+        top: 20px; /* 上に少し余白 */
+      }
+
+      .header-btns a {
+        padding: 10px 20px; /* ボタンのサイズを少し小さく */
+        font-size: 1em; /* フォントサイズ調整 */
+      }
+
+      .music-video ul {
+        font-size: 0.9em; /* リストのフォントサイズ調整 */
+      }
+
+      .btn {
+        font-size: 1em; /* ボタンのフォントサイズ調整 */
+        padding: 10px 20px; /* ボタンのパディング調整 */
+      }
+
+      .music-section {
+        padding: 20px 10px; /* 音楽セクションのパディング調整 */
+      }
+
+      .music-video img {
+        width: 100%; /* スマホで画像が画面にフィットするように */
+      }
+    }
   </style>
 </head>
 
