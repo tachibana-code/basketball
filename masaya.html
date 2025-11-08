@@ -12,33 +12,38 @@
     body {
       font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #f7f7f7; /* 背景色を変更 */
+      color: #4a4a4a; /* 文字色を変更 */
       margin: 0;
       padding: 0;
     }
 
     header {
-      background: #007BFF; /* 青に変更 */
+      background: #0A3D62; /* 深い青に変更 */
       color: white;
-      padding: 80px 20px;
+      padding: 60px 20px; /* ヘッダーの高さを調整 */
       text-align: center;
       position: relative;
-      border-bottom: 5px solid #0056b3; /* 青の少し濃い色 */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* シャドウを少し追加 */
     }
 
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin: 0;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    header h2 {
+      font-size: 1.2em;
+      margin: 5px 0;
+      font-weight: normal;
     }
 
     .header-btns {
       position: absolute;
-      top: 20px;
+      top: 10px;
       left: 20px;
       display: flex;
-      gap: 20px;
+      gap: 15px;
       z-index: 10;
     }
 
@@ -49,46 +54,33 @@
       font-weight: bold;
       border-radius: 30px;
       font-size: 1.1em;
+      background-color: #e74c3c; /* 赤のアクセントに変更 */
       transition: all 0.3s ease-in-out;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     }
 
-    /* ホームボタン */
-    .home-btn {
-      background-color: #28A745; /* ホームは青 */
+    .header-btns a:hover {
+      background-color: #f39c12;
+      transform: scale(1.05);
     }
 
-    .home-btn:hover {
-      background-color: #0056b3; /* ホームボタンホバー時 */
-      transform: translateY(-5px);
-      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /* 活動内容ボタン */
-    .activity-btn {
-      background-color: #28A745; /* 活動内容は緑 */
-    }
-
-    .activity-btn:hover {
-      background-color: #218838; /* 活動内容ボタンホバー時 */
-      transform: translateY(-5px);
-      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-    }
-
+    /* セクションのスタイル */
     section {
-      padding: 50px 20px;
+      padding: 40px 20px;
       text-align: center;
       background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* セクションの影 */
+      margin: 20px 0;
+      border-radius: 10px;
     }
 
-    h2 {
+    section h2 {
       font-size: 2.5em;
-      color: #0056b3; /* 見出しも青に変更 */
+      color: #0A3D62; /* 見出し色を深い青に変更 */
       margin-bottom: 20px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    p {
+    section p {
       font-size: 1.1em;
       margin-bottom: 20px;
       color: #333;
@@ -98,7 +90,7 @@
       display: inline-block;
       padding: 12px 30px;
       margin: 10px;
-      background-color: #007BFF; /* ボタンの背景を青に変更 */
+      background-color: #0A3D62; /* ボタンの背景を深い青に変更 */
       color: white;
       text-decoration: none;
       font-weight: bold;
@@ -108,21 +100,20 @@
     }
 
     .btn:hover {
-      background-color: #0056b3;
-      transform: translateY(-5px);
-      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+      background-color: #e74c3c; /* ホバー時の色を赤に変更 */
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #333;
+      background-color: #0A3D62; /* フッターの背景色を深い青に変更 */
       color: white;
       font-size: 1em;
     }
 
     footer a {
-      color: #007BFF; /* フッターリンクも青 */
+      color: #f39c12; /* フッターリンクを黄色に変更 */
       text-decoration: none;
     }
 
@@ -170,16 +161,17 @@
 
   <header>
     <div class="header-btns">
-      <a href="index.jsp" class="home-btn">🏠 ホーム</a>
-      <a href="suzuki.jsp" class="activity-btn">🏀 活動内容</a>
+      <a href="index.html" class="home-btn">🏠 ホーム</a>
+      <a href="suzuki.html" class="activity-btn">🏀 活動内容</a>
     </div>
     <h1>クラスルーム</h1>
-      </header>
+    <h2>岡山情報ビジネス学院</h2>
+  </header>
 
   <section class="animate" id="classroom-section">
     <h2>クラスルームの入り方</h2>
     <p>クラスルームのコードは以下の通りです。コードを使って、クラスに参加してください！</p>
-    <p><strong>クラスルームコード：</strong>frzd2s7f</p> <!-- JSPで動的にコードを表示 -->
+    <p><strong>クラスルームコード：</strong>frzd2s7f</p>
     <p>参加するには、Google Classroom にログインして、このコードを使って参加します。</p>
   </section>
 
@@ -234,6 +226,7 @@
       });
     });
   </script>
+
 </body>
 
 </html>
